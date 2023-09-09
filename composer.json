@@ -1,0 +1,21 @@
+{
+    "name": "efren/phpmvc-sass-stack",
+    "type": "project",
+    "autoload": {
+        "psr-4":{
+            "Controllers\\": "./controllers",
+            "Models\\": "./models",
+            "MVC\\": "./"
+        }
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Efren Anastacio",
+            "email": "50155831+EfrenAS@users.noreply.github.com"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.5"
+    }
+}

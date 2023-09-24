@@ -1,0 +1,36 @@
+@use 'variables'as var;
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: var.$alice_blue;
+    font-family: var.$font_main;
+    font-size: 1.6rem;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+    width: 100%;
+}
+
+.container {
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto;
+}

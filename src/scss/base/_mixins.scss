@@ -1,0 +1,29 @@
+@use 'variables'as var;
+
+/** Media Queries **/
+@mixin telefono {
+    @media (min-width: var.$telefono) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: var.$tablet) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: var.$desktop) {
+        @content;
+    }
+}
+
+@mixin button($bgColor, $txtColor, $borderColor) {
+    background-color: $bgColor;
+    border: 1px solid $borderColor;
+    border-radius: .5rem;
+    color: $txtColor;
+    font-weight: var.$bold;
+    padding: 1rem 2rem;
+}

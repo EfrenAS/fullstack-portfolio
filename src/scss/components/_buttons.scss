@@ -1,11 +1,6 @@
 @use 'base/variables' as var;
 @use 'base/mixins' as mxs;
 
-.btn-orange {
-  @include mxs.button (var.$prussian_blue, var.$selective_yellow, var.$selective_yellow);
-
-  &:hover {
-    background-color: var.$selective_yellow;
-    color: var.$prussian_blue !important;
-  }
+.btn-primary {
+  @include mxs.button (var.$blue_green, var.$white);
 }

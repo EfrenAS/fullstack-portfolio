@@ -1,6 +1,20 @@
 @use 'base/variables'as var;
 @use 'base/mixins'as mxs;
 
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var.$spacing;
+  justify-content: center;
+  margin-top: calc(var.$spacing * 1.5);
+
+  @include mxs.desktop {
+    justify-content: space-between;
+  }
+}
+
+
+
 .card {
   background-color: var.$white;
   border-radius: .5rem;
@@ -15,7 +29,7 @@
   @include mxs.tablet {
     width: 48rem;
   }
-
+  
   .card-header {
     padding: 0;
   }
@@ -36,13 +50,6 @@
 
   .card-text {
     flex: 2;
-  }
-
-  .card-image img,
-  .card-image picture {
-    width: 100%;
-    aspect-ratio: 3/2;
-    object-fit: contain;
   }
 
   .card-text {

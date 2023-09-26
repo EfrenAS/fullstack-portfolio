@@ -1,0 +1,12 @@
+@use 'base/variables' as var;
+
+.footer {
+
+  margin-top: calc(var.$spacing * 2);
+
+  p  {
+    color: var.$prussian_blue;
+    font-size: var.$large;
+    text-align: center;
+  }
+}

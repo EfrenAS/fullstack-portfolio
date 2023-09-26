@@ -22,11 +22,24 @@ a {
     text-decoration: none;
 }
 
-img {
+img,
+picture {
+    aspect-ratio: 3/2;
+    object-fit: contain;
     display: block;
     height: auto;
     max-width: 100%;
     width: 100%;
+}
+
+section {
+    margin: var.$spacing 0;
+}
+
+
+input,
+textarea {
+    border: none;
 }
 
 .container {

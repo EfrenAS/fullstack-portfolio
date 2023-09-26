@@ -19,11 +19,21 @@
     }
 }
 
-@mixin button($bgColor, $txtColor, $borderColor) {
+@mixin button($bgColor, $txtColor) {
     background-color: $bgColor;
-    border: 1px solid $borderColor;
     border-radius: .5rem;
     color: $txtColor;
+    cursor: pointer;
+    font-size: var.$large;
     font-weight: var.$bold;
-    padding: 1rem 2rem;
+    padding: 1.5rem 3rem;
+    transition: all .3s ease-in-out;
+
+    &:hover {
+        background-color: darken($color: $bgColor, $amount: 10%);
+    }
+}
+
+@mixin badge {
+    
 }

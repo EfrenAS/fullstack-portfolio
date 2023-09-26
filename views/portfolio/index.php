@@ -41,14 +41,14 @@
     <div class="container-resume">
       <p class="profile-name"><span class="subtitle">Hola soy</span>Efren Anastacio Simeon.</p>
       <p class="about-me">Ingeniero en Sistemas Computacionales con especialidad en Sistemas Distribuidos y 3 anos de experiencia en el desarrollo web, veo la oportunidad de aplicar la tecnologia en cada problema que se me presenta, suelo aportar y recibir ideas para llegar a la meta lo mas rapido posible.</p>
-      <a href="#" class="link-download"><span>&darr;</span> Descargar CV</a>
+      <a href="#" class="btn-primary"><span>&darr;</span> Descargar CV</a>
     </div>
   </div>
 </header>
 <main class="container">
-  <section>
-    <h2>Proyectos</h2>
-  </section><!-- Proyectos -->
+  <section class="projects">
+    <h2 class="title">Proyectos</h2>
+  </section><!-- .projects -->
   <section class="skills">
     <h2>Conocimientos</h2>
     <div class="skills__container">
@@ -179,73 +179,61 @@
         </div>
       </div> <!-- .card -->
     </div>
-  </section><!-- Conocimientos -->
-  <section>
+  </section><!-- .skills -->
+  <section class="languages">
     <h2>Idiomas</h2>
-    <p>Espanol</p>
-    <p>Ingles</p>
-  </section><!-- Idiomas -->
+    <div class="card-container">
+      <div class="card">
+        <div class="card-title">
+          <h3>Espanol</h3>
+        </div>
+        <div class="card-body">
+          <div class="card-text">
+            <p>Lengua nativa.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">
+          <h3>Ingles</h3>
+        </div>
+      </div>
+    </div>
+  </section><!-- languages -->
   <section>
     <h2>Formacion</h2>
   </section><!-- Formacion -->
+  <section class="contact">
+    <h2>Contactame</h2>
+    <div class="container-mail">
+      <p class="contact-text">En un proyecto tu y yo?. Hablemos.</p>
+      <a href="mailto:efren.abi@gmail.com?subject=Me gustaria contar con tu talento..." class="mail-contact"><span>efren.anastacio</span>@ymail.com</a>
+    </div>
+    <div class="contact-social-networks">
+      <a href="#">
+        <picture>
+          <source srcset="build/img/social-networks/telegram.avif" type="image/avif">
+          <source srcset="build/img/social-networks/telegram.webp" type="image/webp">
+          <img loading="lazy" src="build/img/social-networks/telegram.png" alt="Logo Telegram">
+        </picture>
+      </a>
+      <a href="#">
+        <picture>
+          <source srcset="build/img/social-networks/whatsapp.avif" type="image/avif">
+          <source srcset="build/img/social-networks/whatsapp.webp" type="image/webp">
+          <img loading="lazy" src="build/img/social-networks/whatsapp.png" alt="Logo WhatsApp">
+        </picture>
+      </a>
+      <a href="#">
+        <picture>
+          <source srcset="build/img/social-networks/messenger.avif" type="image/avif">
+          <source srcset="build/img/social-networks/messenger.webp" type="image/webp">
+          <img loading="lazy" src="build/img/social-networks/messenger.png" alt="Logo WhatsApp">
+        </picture>
+      </a>
+    </div>
+  </section><!-- .contact -->
 </main>
-<section>
-  <h2>Contacto</h2>
-  <div>
-    <picture>
-      <source srcset="build/img/social_media/github.avif" type="image/avif">
-      <source srcset="build/img/social_media/github.webp" type="image/webp">
-      <img loading="lazy" src="build/img/social_media/github.png" alt="Logo GitHub">
-    </picture>
-    <picture>
-      <source srcset="build/img/social_media/linkedin.avif" type="image/avif">
-      <source srcset="build/img/social_media/linkedin.webp" type="image/webp">
-      <img loading="lazy" src="build/img/social_media/linkedin.png" alt="Logo LinkedIn">
-    </picture>
-    <picture>
-      <source srcset="build/img/social_media/telegram.avif" type="image/avif">
-      <source srcset="build/img/social_media/telegram.webp" type="image/webp">
-      <img loading="lazy" src="build/img/lsocial_media/telegram.png" alt="Logo Telegram">
-    </picture>
-    <picture>
-      <source srcset="build/img/social_media/whatsapp.avif" type="image/avif">
-      <source srcset="build/img/social_media/whatsapp.webp" type="image/webp">
-      <img loading="lazy" src="build/img/social_media/whatsapp.png" alt="Logo WhatsApp">
-    </picture>
-  </div>
-  <form action="">
-    <caption>O si lo prefieres, dime en que colaboramos juntos y me pongo en contacto contigo</caption>
-    <div>
-      <label for="name">Nombre(s)</label>
-      <input name="name" type="text" placeholder="nombre">
-    </div>
-    <div>
-      <label for="name">Apellido</label>
-      <input name="name" type="text" placeholder="Apellidos">
-    </div>
-    <div>
-      <label for="phone">Telefono</label>
-      <input name="phone" type="tel" placeholder="442-1234567">
-    </div>
-    <div>
-      <label for="email">Correo Electronico</label>
-      <input name="email" type="email" placeholder="micorreo@micorreo.com">
-    </div>
-    <div>
-      <label for="comments">Explicame un poco</label>
-      <textarea name="comments" id="comments" cols="30" rows="10"></textarea>
-    </div>
-  </form>
-</section><!-- Contacto -->
-<footer>
-  <nav>
-    <a href="#">Hola, soy Efren</a>
-    <a href="#">Proyectos</a>
-    <a href="#">Conocimientos</a>
-    <a href="#">Idiomas</a>
-    <a href="#">Formacion</a>
-    <a href="#">Contacto</a>
-    <a href="#">Descargar CV</a>
-  </nav>
-  <p>Derechos reservados &copy; 2023 - Desarrollado por Efren Anastacio Simeon</p>
+<footer class="footer">
+  <p>&copy; 2023 ETAN. Derechos reservados.</p>
 </footer>

@@ -2,38 +2,87 @@
 
 /** Media Queries **/
 @mixin telefono {
-    @media (min-width: var.$telefono) {
-        @content;
-    }
+  @media (min-width: var.$telefono) {
+    @content;
+  }
 }
 
 @mixin tablet {
-    @media (min-width: var.$tablet) {
-        @content;
-    }
+  @media (min-width: var.$tablet) {
+    @content;
+  }
 }
 
 @mixin desktop {
-    @media (min-width: var.$desktop) {
-        @content;
-    }
+  @media (min-width: var.$desktop) {
+    @content;
+  }
 }
 
 @mixin button($bgColor, $txtColor) {
-    background-color: $bgColor;
-    border-radius: .5rem;
-    color: $txtColor;
-    cursor: pointer;
-    font-size: var.$large;
-    font-weight: var.$bold;
-    padding: 1.5rem 3rem;
-    transition: all .3s ease-in-out;
+  background-color: $bgColor;
+  border-radius: .5rem;
+  color: $txtColor;
+  cursor: pointer;
+  font-size: var.$large;
+  font-weight: var.$bold;
+  padding: 1.5rem 3rem;
+  transition: all .3s ease-in-out;
 
-    &:hover {
-        background-color: darken($color: $bgColor, $amount: 10%);
-    }
+  &:hover {
+    background-color: darken($color: $bgColor, $amount: 10%);
+  }
 }
 
-@mixin badge {
-    
+@mixin badge ($bgColor, $txtColor) {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 0.5rem;
+  background-color: $bgColor;
+  -webkit-box-shadow: 1px 2px 9px -2px rgba(2, 48, 71, 0.42);
+  -moz-box-shadow: 1px 2px 9px -2px rgba(2, 48, 71, 0.42);
+  box-shadow: 1px 2px 9px -2px rgba(2, 48, 71, 0.42);
+  padding: .5rem 1rem;
+  width: 18rem;
+  letter-spacing: .1rem;
+
+  .badge-icon {
+    flex: .5rem;
+
+    image,
+    picture {
+      aspect-ratio: 3/2;
+      object-fit: contain;  
+    }
+  }
+
+  .badge-text {
+    flex: 3;
+    font-weight: var.$bold;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  p {
+    font-size: var.$large;
+    color: $txtColor;
+  }
+}
+
+@mixin borderGradient($sizeBorder, $borderStyle ,$position, $toStart, $toEnd) {
+  border-width: $sizeBorder;
+  border-style: $borderStyle;
+  border-image: linear-gradient($position, $toStart, $toEnd) 1;
+}
+
+@mixin skillTitle($bgColor, $txtColor) {
+  background-color: $bgColor;
+	border-radius: 0px 0px 0.5rem 0px;
+  color: $txtColor;
+  font-size: var.$large;
+  font-weight: var.$bold;
+  padding: calc(var.$spacing / 5);
+  text-align: center;
+  width: 15rem;
 }

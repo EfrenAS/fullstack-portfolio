@@ -1,0 +1,27 @@
+@use 'base/variables'as var;
+@use 'base/mixins'as mxs;
+
+.badge__orange {
+
+  @include mxs.badge(var.$white, var.$prussian_blue);
+
+  border-left: 5px solid var.$selective_yellow;
+}
+
+.badge__blue {
+  @include mxs.badge(var.$white, var.$prussian_blue);
+
+  border-left: 5px solid var.$blue_green;
+}
+
+.badge__dark {
+  @include mxs.badge(var.$white, var.$prussian_blue);
+  border-left: 5px solid var.$prussian_blue;
+}
+
+.badge--inactive {
+  @include mxs.badge(var.$alice_blue, var.$prussian_blue);
+  .badge-icon {
+    filter: grayscale(1);
+  }
+}

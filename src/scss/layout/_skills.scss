@@ -1,14 +1,40 @@
 @use 'base/variables'as var;
 @use 'base/mixins'as mxs;
 
-.skills__container {
+.skills {
+  section {
+    padding-bottom: var.$spacing;
+  }
+}
+
+.container-badge {
   display: flex;
   flex-wrap: wrap;
-  gap: var.$spacing;
-  justify-content: center;
-  margin-top: calc(var.$spacing * 1.5);
+  gap: calc(var.$spacing / 2);
+  justify-content: space-evenly;
+  margin-top: var.$spacing;
+}
 
-  @include mxs.desktop {
-    justify-content: space-between;
+.front-end {
+  @include mxs.borderGradient(3px, solid, to right, var.$selective_yellow, var.$alice_blue);
+
+  .skill-title {
+    @include mxs.skillTitle(var.$selective_yellow, var.$white)
+  }
+}
+
+.back-end {
+  @include mxs.borderGradient(3px, solid, to right, var.$blue_green, var.$alice_blue);
+
+  .skill-title {
+    @include mxs.skillTitle(var.$blue_green, var.$white)
+  }
+}
+
+.others-skills {
+  @include mxs.borderGradient(3px, solid, to right, var.$prussian_blue, var.$alice_blue);
+
+  .skill-title {
+    @include mxs.skillTitle(var.$prussian_blue, var.$white)
   }
 }

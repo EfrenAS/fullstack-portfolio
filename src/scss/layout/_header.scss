@@ -87,7 +87,7 @@
     width: 3rem;
 
     @include mxs.tablet {
-      width: 6rem;
+      width: 5rem;
     }
 
     filter: drop-shadow(.1rem .1rem .2rem var.$prussian_blue);

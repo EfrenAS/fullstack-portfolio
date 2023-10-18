@@ -1,0 +1,6 @@
+@use 'base/variables' as var;
+
+.container-projects {
+  display: flex;
+  gap: var.$spacing;
+}

@@ -2,67 +2,59 @@
 @use 'base/mixins'as mxs;
 
 .card-container {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: var.$spacing;
-  justify-content: center;
   margin-top: calc(var.$spacing * 1.5);
 
   @include mxs.desktop {
-    justify-content: space-between;
+    grid-template-columns: repeat(3, 1fr);
   }
+
 }
-
-
 
 .card {
   background-color: var.$white;
   border-radius: .5rem;
   display: flex;
   flex-direction: column;
-  padding: calc(var.$spacing / 3);
+  justify-content: space-between;
   -webkit-box-shadow: 1px 2px 9px -2px rgba(2, 48, 71, 0.42);
   -moz-box-shadow: 1px 2px 9px -2px rgba(2, 48, 71, 0.42);
   box-shadow: 1px 2px 9px -2px rgba(2, 48, 71, 0.42);
+  position: relative;
   width: 100%;
 
   @include mxs.tablet {
-    width: 48rem;
-  }
-  
-  .card-header {
-    padding: 0;
+    width: 30rem;
   }
 }
 
-.card-body {
+.card-image {
+  flex: 30rem;
+  overflow: hidden;
+  border-radius: .5rem .5rem 0 0;
+}
+
+.card-footer {
   display: flex;
-  flex-direction: column;
-  gap: calc(var.$spacing / 4);
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem 1rem;
 
-  @include mxs.tablet {
-    flex-direction: row;
-  }
+  .card-link {
+    width: 3rem;
+    transition: filter .3s ease-in-out;
 
-  .card-image {
-    flex: 1;
-  }
+    &:hover {
 
-  .card-text {
-    flex: 2;
-  }
-
-  .card-text {
-    border-top: 1px solid var.$alice_blue;
-    padding-left: calc(var.$spacing / 3);
-
-    @include mxs.tablet {
-      border: none;
-      border-left: 1px solid var.$alice_blue;
+      filter: grayscale(1);
     }
-
-    p {
-      font-size: var.$regular;
-    }
+  }
+  
+  
+  h3 {
+    margin: 0;
+    font-size: var.$regular;
   }
 }
